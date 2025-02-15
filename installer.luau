@@ -22,4 +22,8 @@ local suc, res = pcall(function()
     end
 end)
 
-if res and not suc then return warn(res) end
+if res and not suc then
+    return warn(res)
+elseif suc then
+    return loadstring(game:HttpGet("https://raw.githubusercontent.com/QP-Offcial/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+end
