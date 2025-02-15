@@ -1,5 +1,5 @@
 local cloneref = cloneref or function(v) return v end
-local cfg = 'Sunlight' -- Sunlight is the only option now lolz
+local cfg = shared.cfg -- Sunlight is the only option now lolz
 local url = 'https://api.github.com/repos/skidvape/cfgInstaller/contents/'..cfg
 
 for _, folder in {'newvape', 'newvape/games', 'newvape/profiles', 'newvape/assets', 'newvape/libraries', 'newvape/guis'} do
