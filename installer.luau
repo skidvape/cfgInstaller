@@ -1,4 +1,4 @@
-if string.find(getgenv().cfg, 'alsploit') and not getgenv().cfg then return nil end
+if string.find(getgenv().cfg, 'alsploit') or not getgenv().cfg then return nil end
 
 local cloneref = cloneref or function(v) return v end
 local cfg = getgenv().cfg -- returns the option you picked
