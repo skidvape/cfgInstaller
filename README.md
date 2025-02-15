@@ -25,4 +25,5 @@ If its not the supposed utility at fault, please try some troubleshooting steps.
 
 ## Developers & Credits
 [stav](https://github.com/sstvskids) - Lead maintainer of the project - ._stav on Discord
+<br/>
 [7GrandDad](https://github.com/7GrandDadPGN) - Wrote the README - vaperoblox on Discord
