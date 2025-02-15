@@ -1,18 +1,25 @@
-local cloneref = cloneref or function(v) return v; end;
-local cfg = 'Sunlight'; -- Sunlight is the only option now lolz
-local url = 'https://api.github.com/repos/skidvape/configInstaller/contents/Sunlight';
+local cloneref = cloneref or function(v) return v end
+local cfg = 'Sunlight' -- Sunlight is the only option now lolz
+local url = 'https://api.github.com/repos/skidvape/cfgInstaller/contents/'..cfg
 
 for _, folder in {'newvape', 'newvape/games', 'newvape/profiles', 'newvape/assets', 'newvape/libraries', 'newvape/guis'} do
 	if not isfolder(folder) then
-		makefolder(folder); -- required if you don't have the folders
-	end;
-end;
+		makefolder(folder) -- required if you don't have the folders
+	end
+end
 
 local suc, res = pcall(function()
-    local cfgfiles = game:GetService('HttpService'):JSONDecode(url);
+    local cfgurl = game:HttpGet(url)
+    local cfgfiles = game:GetService('HttpService'):JSONDecode(cfgurl)
+    
     for i,v in ipairs(cfgfiles) do
-        writefile(v);
-    end;
-end);
+        if not isfile('newvape/profiles/'..v.name) then
+            writefile('newvape/profiles/'..v.name, game:HttpGet(v.download_url))
+        else
+            delfile('newvape/profiles/'..v.name)
+            writefile('newvape/profiles/'..v.name, game:HttpGet(v.download_url))
+        end
+    end
+end)
 
-if res and not suc then return warn(res); end;
+if res and not suc then return warn(res) end
