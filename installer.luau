@@ -1,5 +1,5 @@
 local cloneref = cloneref or function(v) return v end
-local cfg = shared.cfg -- returns the option you picked
+local cfg = getgenv().cfg -- returns the option you picked
 local url = 'https://api.github.com/repos/skidvape/cfgInstaller/contents/'..cfg
 
 for _, folder in {'newvape', 'newvape/games', 'newvape/profiles', 'newvape/assets', 'newvape/libraries', 'newvape/guis'} do
@@ -22,8 +22,4 @@ local suc, res = pcall(function()
     end
 end)
 
-if res and not suc then
-    return warn(res)
-elseif suc then
-    return loadstring(game:HttpGet("https://raw.githubusercontent.com/QP-Offcial/VapeV4ForRoblox/main/NewMainScript.lua", true))()
-end
+if res and not suc then return warn('Report any issues to @._stav on discord! '..res) end
