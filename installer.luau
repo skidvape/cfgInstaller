@@ -1,5 +1,6 @@
+local cloneref = cloneref or function(v) return v; end;
 local cfg = 'Sunlight'; -- Sunlight is the only option now lolz
-local url = 'https://github.com/sstvskids/configInstaller/tree/main/Sunlight';
+local url = 'https://api.github.com/repos/skidvape/configInstaller/contents/Sunlight';
 
 for _, folder in {'newvape', 'newvape/games', 'newvape/profiles', 'newvape/assets', 'newvape/libraries', 'newvape/guis'} do
 	if not isfolder(folder) then
@@ -8,7 +9,10 @@ for _, folder in {'newvape', 'newvape/games', 'newvape/profiles', 'newvape/asset
 end;
 
 local suc, res = pcall(function()
-    for i,v in pairs(url) do
-        print(v);
-    end
+    local cfgfiles = game:GetService('HttpService'):JSONDecode(url);
+    for i,v in ipairs(cfgfiles) do
+        writefile(v);
+    end;
 end);
+
+if res and not suc then return warn(res); end;
