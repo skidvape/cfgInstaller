@@ -8,7 +8,7 @@
 1. Download the specific scripting utility of your choice.
 2. Execute the provided loadstring below.
 ```luau
-getgenv().cfg = 'Sunlight' -- only avaliable one rn
+getgenv().cfg = 'Sunlight' -- {alsploit-cfg1 or Sunlight}
 loadstring(game:HttpGet('https://raw.githubusercontent.com/skidvape/cfgInstaller/refs/heads/main/installer.luau'))()
 ```
 
