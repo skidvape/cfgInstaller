@@ -1,3 +1,5 @@
+if not getgenv().cfg then return end
+
 local cloneref = cloneref or function(v) return v end
 local cfg = getgenv().cfg -- returns the option you picked
 local url = 'https://api.github.com/repos/skidvape/cfgInstaller/contents/'..cfg
