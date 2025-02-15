@@ -5,13 +5,11 @@ local cfg = getgenv().cfg -- returns the option you picked
 local url = 'https://api.github.com/repos/skidvape/cfgInstaller/contents/'..cfg
 
 if string.find(getgenv().cfg, 'alsploit') then
-    for _, v in {'AlSploit'} do
-        if not isfolder(v) then
-            makefolder(v)
-        elseif isfolder('AlSploit') then
-            delfolder('AlSploit')
-            makefolder('AlSploit')
-        end
+    if not isfolder('AlSploit') then
+        makefolder('AlSploit')
+    elseif isfolder('AlSploit') then
+        delfolder('AlSploit')
+        makefolder('AlSploit')
     end
 else
     for _, v in {'newvape', 'newvape/profiles'} do
@@ -23,7 +21,6 @@ else
         end
     end
 end
-
 
 local suc, res = pcall(function()
     local cfgurl = game:HttpGet(url)
