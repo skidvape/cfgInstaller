@@ -5,12 +5,12 @@ local cfg = getgenv().cfg -- returns the option you picked
 local url = 'https://api.github.com/repos/skidvape/cfgInstaller/contents/'..cfg
 
 if string.find(getgenv().cfg, 'alsploit') then
-    for _, v in {'AlSploit', 'newvape/profiles'} do
+    for _, v in {'AlSploit'} do
         if not isfolder(v) then
             makefolder(v)
-        elseif isfolder('AlSploit/??') then
-            delfolder('newvape/profiles')
-            makefolder('newvape/profiles')
+        elseif isfolder('AlSploit') then
+            delfolder('AlSploit')
+            makefolder('AlSploit')
         end
     end
 else
