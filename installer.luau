@@ -34,4 +34,4 @@ local suc, res = pcall(function()
     end
 end)
 
-if res and not suc then return warn('Report any issues to @._stav on discord! '..res) end
+if res and not suc then return warn('Report any issues to @._stav on discord!\n Config: '..getgenv().cfg..'\n Error: '..res) end
