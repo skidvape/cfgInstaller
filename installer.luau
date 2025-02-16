@@ -2,10 +2,10 @@ if not getgenv().cfg then return nil end
 
 local cloneref = cloneref or function(v) return v end
 local cfg = getgenv().cfg -- returns the option you picked
-local url = 'https://api.github.com/repos/skidvape/cfgInstaller/contents/'..cfg
+local url = 'https://api.github.com/repos/skidvape/cfgInstaller/contents/cfgs'..cfg
 
 if string.find(getgenv().cfg, 'alsploit') then
-    if isfile('AlSploitConfiguration') then delfile('AlSploitConfiguration') end
+    if isfile('AlSploitConfiguration.json') then delfile('AlSploitConfiguration.json') end
 else
     for _, v in {'newvape', 'newvape/profiles'} do
         if not isfolder(v) then
