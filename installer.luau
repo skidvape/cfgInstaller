@@ -30,7 +30,7 @@ local suc, res = pcall(function()
     local cfgurl = game:HttpGet(url)
     local cfgfiles = game:GetService('HttpService'):JSONDecode(cfgurl)
     
-    for i,v in ipairs(cfgfiles) do
+    for _, v in ipairs(cfgfiles) do
         if string.find(cfg, 'alsploit') then
             if not isfile(v.name) then
                 writefile(v.name, game:HttpGet(v.download_url)) -- downloads
