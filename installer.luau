@@ -47,4 +47,4 @@ local suc, res = pcall(function()
     end
 end)
 
-if res and not suc then return warn('Report any issues to @._stav on discord!\n Config: '..cfg..'\n Error: '..res) end
+if suc then print('success!') elseif res and not suc then return warn('Report any issues to @._stav on discord!\n Config: '..cfg..'\n Error: '..res) end
