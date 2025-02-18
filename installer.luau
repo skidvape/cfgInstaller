@@ -46,5 +46,12 @@ local suc, res = pcall(function()
         end
     end
 end)
-
-if suc then print('success!') elseif res and not suc then return warn('Report any issues to @._stav on discord!\n Config: '..cfg..'\n Error: '..res) end
+   
+if suc then
+    getgenv().iconval = 'rbxassetid://10723415903'
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/skidvape/cfgInstaller/refs/heads/main/notif.luau'))()
+elseif res and not suc then
+    getgenv().iconval = 'rbxassetid://10734951173'
+    getgenv().cfgtext = 'Config: '..cfg..'\nError: '..res
+    return loadstring(game:HttpGet('https://raw.githubusercontent.com/skidvape/cfgInstaller/refs/heads/main/notif.luau'))()
+end

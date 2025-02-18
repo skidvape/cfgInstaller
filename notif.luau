@@ -6,6 +6,6 @@ local StarterGui = cloneref(game:GetService('StarterGui'))
 StarterGui:SetCore('SendNotification', {
     Title = 'cfgInstaller',
     Text = getgenv().cfgtext or getgenv().cfg..' has installed successfully!',
-    Duration = 4,
+    Duration = 20,
     Icon = getgenv().iconval
 })
