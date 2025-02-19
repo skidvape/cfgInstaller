@@ -4,6 +4,12 @@
 ## Contacts
 [YouTube](https://youtube.com/@stavexploitz)
 
+## Supported Scripts
+1. [Vape](https://github.com/7GrandDadPGN/VapeV4ForRoblox)
+2. [Night](https://discord.gg/Nt4BnPnYPB)
+3. [AlSploit](https://discord.gg/BgaPWbrjyJ)
+4. [Moon](https://discord.gg/GyKEDmVkPQ)
+
 ## Usage
 1. Download the specific scripting utility of your choice.
 2. Execute the provided loadstring below, whilst choosing a config.
