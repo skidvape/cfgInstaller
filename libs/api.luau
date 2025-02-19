@@ -7,8 +7,8 @@ local scripts = {
 
 scriptapi.identifyscript = function()
     for i,v in pairs(scripts) do
-        if string.find(cfg, v) then
-            return i
+        if string.find(cfg, tostring(i)) then
+            return v
         end
     end
 end
