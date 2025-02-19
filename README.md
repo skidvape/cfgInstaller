@@ -1,4 +1,4 @@
-> [!WARNING]
+> [!IMPORTANT]
 > cfgInstaller might not HAVE the latest up-to date configs
 
 ## Contacts
