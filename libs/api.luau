@@ -17,10 +17,10 @@ end
 scriptapi.getfolder = function()
     for i,v in pairs(scripts) do
         if string.find(cfg, tostring(i)) then
-            return v..'/Configs'
+            return v..'/Configs/'
         end
     end
-    return 'newvape/profiles'
+    return 'newvape/profiles/'
 end
 
 return scriptapi
