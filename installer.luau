@@ -4,25 +4,17 @@ local cfg = getgenv().cfg -- returns the option you picked
 local url = 'https://api.github.com/repos/skidvape/cfgInstaller/contents/cfgs/'..cfg
 local scriptapi = loadstring(game:HttpGet('https://raw.githubusercontent.com/skidvape/cfgInstaller/refs/heads/main/libs/api.luau'))()
 local script = scriptapi.identifyscript()
+local getfolder = scriptapi.getfolder()
 
 if string.find(cfg, 'alsploit') then
     if isfile('AlSploitConfiguration.json') then delfile('AlSploitConfiguration.json') end
-elseif string.find(cfg, 'moon' or 'night') then
-    for _, v in {script, script..'/Configs'} do
-        if not isfolder(v) then
-            makefolder(v)
-        elseif isfolder(script..'/Configs') then
-            delfolder(script..'/Configs')
-            makefolder(script..'/Configs')
-        end
-    end
 else
-    for _, v in {'newvape', 'newvape/profiles'} do
+    for _, v in {script, getfolder} do
         if not isfolder(v) then
             makefolder(v)
-        elseif isfolder('newvape/profiles') then
-            delfolder('newvape/profiles')
-            makefolder('newvape/profiles')
+        elseif isfolder(getfolder) then
+            delfolder(getfolder)
+            makefolder(getfolder)
         end
     end
 end
@@ -36,13 +28,9 @@ local suc, res = pcall(function()
             if not isfile(v.name) then
                 writefile(v.name, game:HttpGet(v.download_url)) -- downloads
             end
-        elseif string.find(cfg, 'moon' or 'night') then
-            if not isfile(script..'/Configs'..v.name) then
-                writefile(script..'/Configs'..v.name, game:HttpGet(v.download_url)) -- downloads
-            end
         else
-            if not isfile('newvape/profiles/'..v.name) then
-                writefile('newvape/profiles/'..v.name, game:HttpGet(v.download_url)) -- downloads
+            if not isfile(getfolder..v.name) then
+                writefile(getfolder..v.name, game:HttpGet(v.download_url)) -- downloads
             end
         end
     end
