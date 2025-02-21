@@ -12,4 +12,4 @@ local suc, res = pcall(function()
     })
 end)
 
-if res then return error('bro get a better executor '..getexecutorname()) end
+if res then warn('bro get a better executor '..getexecutorname()) end
