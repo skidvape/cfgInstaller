@@ -9,7 +9,7 @@ scriptapi.identifyscript = function()
     for i,v in pairs(scripts) do
         if string.find(cfg, tostring(i)) then
             return v
-        else
+        elseif nil then
             return 'newvape'
         end
     end
@@ -19,7 +19,7 @@ scriptapi.getfolder = function()
     for i,v in pairs(scripts) do
         if string.find(cfg, tostring(i)) then
             return v..'/Configs'
-        else
+        elseif nil then
             return 'newvape/profiles'
         end
     end
