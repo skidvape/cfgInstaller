@@ -12,4 +12,4 @@ local suc, res = pcall(function()
     })
 end)
 
-if res then warn(getgenv().cfgtext, res) end
+if res then warn(getgenv().cfgtext or getgenv().cfg..' has installed successfully!', res) end
