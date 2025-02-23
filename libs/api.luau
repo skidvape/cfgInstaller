@@ -29,9 +29,7 @@ scriptapi.getfolder = function()
         end
     end
     for i, v in pairs(scriptapi.vapetypes) do
-        if string.find(cfg, tostring(i)) then
-            return v..'/profiles/' or v[1]..'/profiles/'
-        end
+        return v..'/profiles/' or v[1]..'/profiles/'
     end
 end
 
