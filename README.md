@@ -1,5 +1,5 @@
 > [!IMPORTANT]
-> cfgInstaller might not HAVE the latest up-to date configs
+> cfgInstaller might not have the latest up-to date configs!
 
 ## Contacts
 [YouTube](https://youtube.com/@stavexploitz)
