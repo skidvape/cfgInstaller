@@ -4,10 +4,6 @@ scriptapi.scripts = {
     night = 'Night',
     moon = 'Moon'
 }
-scriptapi.vapetypes = {
-    oldvape = 'vape',
-    'newvape'
-}
 
 scriptapi.identifyscript = function()
     for i,v in pairs(scriptapi.scripts) do
@@ -15,11 +11,7 @@ scriptapi.identifyscript = function()
             return v
         end
     end
-    for i, v in pairs(scriptapi.vapetypes) do
-        if string.find(cfg, tostring(i)) then
-            return v or v[1]
-        end
-    end
+    return 'newvape'
 end
 
 scriptapi.getfolder = function()
@@ -28,9 +20,7 @@ scriptapi.getfolder = function()
             return v..'/Configs/'
         end
     end
-    for i, v in pairs(scriptapi.vapetypes) do
-        return v..'/profiles/' or v[1]..'/profiles/'
-    end
+    return 'newvape/profiles/'
 end
 
 return scriptapi
