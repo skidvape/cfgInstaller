@@ -1,26 +1,25 @@
 local scriptapi = {}
 local cfg = getgenv().cfg
-local scripts = {
+scriptapi.scripts = {
     night = 'Night',
     moon = 'Moon'
 }
+scriptapi.vapetypes = {
+    oldvape = 'vape',
+    'newvape'
+}
 
 scriptapi.identifyscript = function()
-    for i,v in pairs(scripts) do
-        if string.find(cfg, tostring(i)) then
-            return v
-        end
-    end
-    return 'newvape'
-end
-
-scriptapi.getfolder = function()
-    for i,v in pairs(scripts) do
+    for i,v in pairs(scriptapi.scripts) do
         if string.find(cfg, tostring(i)) then
             return v..'/Configs/'
         end
     end
-    return 'newvape/profiles/'
+    for i, v in pairs(scriptapi.vapetypes) do
+        if string.find(cfg, tostring(i)) then
+            return (v..'/profiles/') or (v[1]..'/profiles/')
+        end
+    end
 end
 
 return scriptapi
