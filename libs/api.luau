@@ -27,13 +27,17 @@ end
 scriptapi.getscript = function()
     local cfgurl = game:HttpGet(url)
     local cfgfiles = game:GetService('HttpService'):JSONDecode(cfgurl)
+    local script = {}
         
     for _, v in ipairs(cfgfiles) do
+        local scriptpath = scriptapi.getfolder()..v.name
         if string.find(cfg, 'alsploit') then
-            return v.name
+            scriptpath = v.name
         end
-        return scriptapi.getfolder()..v.name
+        table.insert(script, {name = scriptpath, url = v.download_url})
     end
+    
+    return script
 end
 
 return scriptapi

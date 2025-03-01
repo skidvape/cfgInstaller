@@ -21,12 +21,9 @@ else
 end
 
 local suc, res = pcall(function()
-    local cfgurl = game:HttpGet(url)
-    local cfgfiles = game:GetService('HttpService'):JSONDecode(cfgurl)
-    
-    for _, v in ipairs(cfgfiles) do
-        if not isfile(getscript) then
-            writefile(getscript, game:HttpGet(v.download_url)) -- downloads
+    for _, v in ipairs(getscript) do
+        if not isfile(v.name) then
+            writefile(v.name, game:HttpGet(v.url)) -- downloads
         end
     end
 end)
