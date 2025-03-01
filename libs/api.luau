@@ -25,18 +25,15 @@ scriptapi.getfolder = function()
 end
 
 scriptapi.getscript = function()
-    local suc, res = pcall(function()
-        local cfgurl = game:HttpGet(url)
-        local cfgfiles = game:GetService('HttpService'):JSONDecode(cfgurl)
+    local cfgurl = game:HttpGet(url)
+    local cfgfiles = game:GetService('HttpService'):JSONDecode(cfgurl)
         
-        for _, v in ipairs(cfgfiles) do
-            if string.find(cfg, 'alsploit') then
-                return v.name
-            else
-                return scriptapi.getfolder()..v.name
-            end
+    for _, v in ipairs(cfgfiles) do
+        if string.find(cfg, 'alsploit') then
+            return v.name
         end
-    end)
+        return scriptapi.getfolder()..v.name
+    end
 end
 
 return scriptapi
