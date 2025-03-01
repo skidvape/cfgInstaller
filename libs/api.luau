@@ -1,5 +1,6 @@
 local scriptapi = {}
 local cfg = getgenv().cfg
+local url = 'https://api.github.com/repos/skidvape/cfgInstaller/contents/cfgs/'..cfg
 scriptapi.scripts = {
     night = 'Night',
     moon = 'Moon'
@@ -21,6 +22,21 @@ scriptapi.getfolder = function()
         end
     end
     return 'newvape/profiles/'
+end
+
+scriptapi.getscript = function()
+    local suc, res = pcall(function()
+        local cfgurl = game:HttpGet(url)
+        local cfgfiles = game:GetService('HttpService'):JSONDecode(cfgurl)
+        
+        for _, v in ipairs(cfgfiles) do
+            if string.find(cfg, 'alsploit') then
+                return v.name
+            else
+                return scriptapi.getfolder()..v.name
+            end
+        end
+    end)
 end
 
 return scriptapi

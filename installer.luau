@@ -5,6 +5,7 @@ local url = 'https://api.github.com/repos/skidvape/cfgInstaller/contents/cfgs/'.
 local scriptapi = loadstring(game:HttpGet('https://raw.githubusercontent.com/skidvape/cfgInstaller/refs/heads/main/libs/api.luau'))()
 local script = scriptapi.identifyscript()
 local getfolder = scriptapi.getfolder()
+local getscript = scriptapi.getscript()
 
 if string.find(cfg, 'alsploit') then
     if isfile('AlSploitConfiguration.json') then delfile('AlSploitConfiguration.json') end
@@ -24,14 +25,8 @@ local suc, res = pcall(function()
     local cfgfiles = game:GetService('HttpService'):JSONDecode(cfgurl)
     
     for _, v in ipairs(cfgfiles) do
-        if string.find(cfg, 'alsploit') then
-            if not isfile(v.name) then
-                writefile(v.name, game:HttpGet(v.download_url)) -- downloads
-            end
-        else
-            if not isfile(getfolder..v.name) then
-                writefile(getfolder..v.name, game:HttpGet(v.download_url)) -- downloads
-            end
+        if not isfile(getscript) then
+            writefile(getscript, game:HttpGet(v.download_url)) -- downloads
         end
     end
 end)
