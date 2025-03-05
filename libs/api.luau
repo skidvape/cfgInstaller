@@ -3,7 +3,9 @@ local cfg = getgenv().cfg
 local url = 'https://api.github.com/repos/skidvape/cfgInstaller/contents/cfgs/'..cfg
 scriptapi.scripts = {
     night = 'Night',
-    moon = 'Moon'
+    moon = 'Moon',
+    aurora = 'Aurora',
+    autumn = 'AutumnV3'
 }
 
 scriptapi.identifyscript = function()
@@ -28,7 +30,6 @@ scriptapi.getscript = function()
     local cfgurl = game:HttpGet(url)
     local cfgfiles = game:GetService('HttpService'):JSONDecode(cfgurl)
     local script = {}
-        
     for _, v in ipairs(cfgfiles) do
         local scriptpath = scriptapi.getfolder()..v.name
         if string.find(cfg, 'alsploit') then
