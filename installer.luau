@@ -23,7 +23,7 @@ end
 local suc, res = pcall(function()
     for _, v in ipairs(getscript) do
         if not isfile(v.name) then
-            writefile(v.name, game:HttpGet(v.url)) -- downloads
+            writefile(v.name, game:HttpGet(v.url))
         end
     end
 end)

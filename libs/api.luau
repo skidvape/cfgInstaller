@@ -5,7 +5,7 @@ scriptapi.scripts = {
     night = 'Night',
     moon = 'Moon',
     aurora = 'Aurora',
-    autumn = 'AutumnV3'
+    exodus = 'Exodus'
 }
 
 scriptapi.identifyscript = function()
@@ -18,10 +18,8 @@ scriptapi.identifyscript = function()
 end
 
 scriptapi.getfolder = function()
-    for i,v in pairs(scriptapi.scripts) do
-        if string.find(cfg, tostring(i)) then
-            return v..'/Configs/'
-        end
+    if scriptapi.identifyscript() ~= 'newvape' then
+        return scriptapi.identifyscript()..'/Configs/'
     end
     return 'newvape/profiles/'
 end
@@ -37,7 +35,6 @@ scriptapi.getscript = function()
         end
         table.insert(script, {name = scriptpath, url = v.download_url})
     end
-    
     return script
 end
 
