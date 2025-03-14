@@ -9,6 +9,8 @@
 2. [Night](https://discord.gg/Nt4BnPnYPB)
 3. [AlSploit](https://discord.gg/BgaPWbrjyJ)
 4. [Moon](https://discord.gg/GyKEDmVkPQ)
+5. [Aurora](https://github.com/cocotv666/Aurora)
+6. [Autumn](https://discord.gg/X4T9HrK2ge)
 
 ## Usage
 1. Download the specific scripting utility of your choice.
