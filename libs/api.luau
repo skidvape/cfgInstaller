@@ -9,7 +9,7 @@ scriptapi.scripts = {
 }
 
 scriptapi.identifyscript = function()
-    for i,v in pairs(scriptapi.scripts) do
+    for i,v in scriptapi.scripts do
         if string.find(cfg, tostring(i)) then
             return v
         end
