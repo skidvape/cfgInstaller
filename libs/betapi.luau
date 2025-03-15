@@ -7,9 +7,17 @@ scriptapi.scripts = {
     aurora = 'Aurora',
     flux = 'Flux'
 }
+scriptapi.customvapes = {
+    skid = 'skid'
+}
 
 scriptapi.identifyscript = function()
     for i,v in scriptapi.scripts do
+        if string.find(cfg, tostring(i)) then
+            return v
+        end
+    end
+    for i,v in scriptapi.customvapes do
         if string.find(cfg, tostring(i)) then
             return v
         end
@@ -18,8 +26,15 @@ scriptapi.identifyscript = function()
 end
 
 scriptapi.getfolder = function()
-    if scriptapi.identifyscript() ~= 'newvape' then
-        return scriptapi.identifyscript()..'/Configs/'
+    for i,v in scriptapi.customvapes do
+        if string.find(cfg, tostring(i)) then
+            return v..'/profiles/'
+        end
+    end
+    for i,v in scriptapi.scripts do
+        if string.find(cfg, tostring(i)) then
+            return v..'/Configs/'
+        end
     end
     return 'newvape/profiles/'
 end
