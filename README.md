@@ -10,7 +10,11 @@
 3. [AlSploit](https://discord.gg/BgaPWbrjyJ)
 4. [Moon](https://discord.gg/GyKEDmVkPQ)
 5. [Aurora](https://github.com/cocotv666/Aurora)
-6. [Autumn](https://discord.gg/X4T9HrK2ge)
+6. [Flux](https://discord.gg/X4T9HrK2ge)
+
+## Supported Vape Customs (beta)
+Vape customs that use different directorys ('newvape' --> 'skid')
+1. [Skid (beta)](https://discord.gg/X4T9HrK2ge)
 
 ## Usage
 1. Download the specific scripting utility of your choice.
