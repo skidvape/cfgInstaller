@@ -4,7 +4,7 @@ local url = 'https://api.github.com/repos/skidvape/cfgInstaller/contents/cfgs/'.
 scriptapi.scripts = {
     night = 'Night',
     moon = 'Moon',
-    aurora = 'Aurora',
+    --aurora = 'Aurora',
     flux = 'Flux'
 }
 
@@ -14,14 +14,16 @@ scriptapi.identifyscript = function()
             return v
         end
     end
+    if getgenv().customvape == true then return 'Lunar Vape' end
     return 'newvape'
 end
 
 scriptapi.getfolder = function()
-    if scriptapi.identifyscript() ~= 'newvape' then
+    if scriptapi.identifyscript() ~= ('newvape' or 'Lunar Vape') then
         return scriptapi.identifyscript()..'/Configs/'
     end
-    return 'newvape/profiles/'
+    if getgenv().customvape == true then return 'Lunar Vape/Profiles' end
+    return scriptapi.identifyscript()..'/profiles/'
 end
 
 scriptapi.getscript = function()

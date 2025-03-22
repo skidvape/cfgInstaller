@@ -9,12 +9,16 @@
 2. [Night](https://discord.gg/Nt4BnPnYPB)
 3. [AlSploit](https://discord.gg/BgaPWbrjyJ)
 4. [Moon](https://discord.gg/GyKEDmVkPQ)
-5. [Aurora](https://github.com/cocotv666/Aurora)
+5. [Aurora](https://github.com/cocotv666/Aurora) -- dropped until i can find the path
 6. [Flux](https://discord.gg/X4T9HrK2ge)
 
 ## Supported Vape Customs (beta)
-Vape customs that use different directorys ('newvape' --> 'skid')
-1. [Skid (beta)](https://discord.gg/X4T9HrK2ge)
+Vape customs that use different directorys ('newvape' --> 'Lunar Vape')
+To use this put this above your vape config of choice
+```luau
+getgenv().customvape = true
+```
+1. [Lunar (beta)](https://discord.gg/4e7CJCxGE6)
 
 ## Usage
 1. Download the specific scripting utility of your choice.
