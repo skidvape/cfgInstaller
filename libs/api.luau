@@ -37,7 +37,7 @@ scriptapi.identifyscript = function()
 end
 
 scriptapi.getfolder = function()
-    if scriptapi.identifyscript() ~= 'newvape' or 'Aurora' or scriptapi.grabscripts(scriptapi.vapecustoms) then
+    if scriptapi.identifyscript() ~= ('newvape' or 'Aurora' or scriptapi.grabscripts(scriptapi.vapecustoms)) then
         return scriptapi.identifyscript()..'/Configs/'
     end
     if customcfg then
