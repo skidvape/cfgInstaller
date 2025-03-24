@@ -13,10 +13,10 @@
 6. [Flux](https://discord.gg/X4T9HrK2ge)
 
 ## Supported Vape Customs (beta)
-Vape customs that use different directorys ('newvape' --> 'Lunar Vape' or 'skid' or 'vape')
+Vape customs that use different directorys ('newvape' --> 'lunar', 'oldvape', 'skid')
 To use this put this above your vape config of choice
 ```luau
-getgenv().customvape = 'Lunar Vape'
+getgenv().customvape = 'lunar' -- oldvape, skid
 ```
 1. [Lunar (beta)](https://discord.gg/4e7CJCxGE6)
 2. [Skid (discontinued)](https://github.com/skidvape/SkidForRoblox)
