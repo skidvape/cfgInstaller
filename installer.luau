@@ -1,5 +1,4 @@
 if not getgenv().cfg then return nil end
-if not getgenv().customvape then getgenv().customvape = false end 
 
 local cfg = getgenv().cfg -- returns the option you picked
 local url = 'https://api.github.com/repos/skidvape/cfgInstaller/contents/cfgs/'..cfg
