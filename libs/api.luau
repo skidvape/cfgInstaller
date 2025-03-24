@@ -14,9 +14,11 @@ scriptapi.vapecustoms = {
     lunar = 'Lunar Vape'
 }
 
-scriptapi.grabscripts = function(path: table)
-    for _,v in path do
-        return v
+scriptapi.grabscripts = function(path: table, config: string)
+    for i,v in pairs(path) do
+        if string.find(config, tostring(i)) then
+            return v
+        end
     end
 end
 
