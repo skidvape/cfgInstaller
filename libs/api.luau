@@ -26,9 +26,11 @@ scriptapi.identifyscript = function()
             return v
         end
     end
-    for i,v in scriptapi.vapecustoms do
-        if string.find(customcfg, tostring(i)) then
-            return v
+    if customcfg then
+        for i,v in scriptapi.vapecustoms do
+            if string.find(customcfg, tostring(i)) then
+                return v
+            end
         end
     end
     return 'newvape'
@@ -38,10 +40,12 @@ scriptapi.getfolder = function()
     if scriptapi.identifyscript() ~= 'newvape' or 'Aurora' or scriptapi.grabscripts(scriptapi.vapecustoms) then
         return scriptapi.identifyscript()..'/Configs/'
     end
-    if string.find('Lunar Vape', scriptapi.grabscripts(scriptapi.vapecustoms)) then
-        return scriptapi.identifyscript()..'/Profiles/'
-    elseif string.find('Aurora', scriptapi.grabscripts(scriptapi.scripts)) then
-        return scriptapi.identifyscript()
+    if customcfg then
+        if string.find('Lunar Vape', scriptapi.grabscripts(scriptapi.vapecustoms)) then
+            return scriptapi.identifyscript()..'/Profiles/'
+        elseif string.find('Aurora', scriptapi.grabscripts(scriptapi.scripts)) then
+            return scriptapi.identifyscript()
+        end
     end
     return scriptapi.identifyscript()..'/profiles/'
 end
