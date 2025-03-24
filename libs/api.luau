@@ -14,12 +14,12 @@ scriptapi.vapecustoms = {
     lunar = 'Lunar Vape'
 }
 
-scriptapi.grabscripts = function(path: table, config: string)
+scriptapi.grabscripts = function(path: table)
+    local val = {}
     for i,v in pairs(path) do
-        if string.find(config, tostring(i)) then
-            return v
-        end
+        table.insert(val, v)
     end
+    return val
 end
 
 scriptapi.identifyscript = function()
@@ -38,14 +38,19 @@ scriptapi.identifyscript = function()
     return 'newvape'
 end
 
+scriptapi.excludedscripts = function()
+    local excluded = {'newvape', 'Aurora'}
+    return table.concat(excluded, ',')..','..table.concat(scriptapi.grabscripts(scriptapi.vapecustoms), ',')
+end
+
 scriptapi.getfolder = function()
-    if scriptapi.identifyscript() ~= ('newvape' or 'Aurora' or scriptapi.grabscripts(scriptapi.vapecustoms)) then
+    if not string.find(scriptapi.excludedscripts(), scriptapi.identifyscript()) then
         return scriptapi.identifyscript()..'/Configs/'
     end
     if customcfg then
-        if string.find('Lunar Vape', scriptapi.grabscripts(scriptapi.vapecustoms)) then
+        if string.find('Lunar Vape', scriptapi.identifyscript()) then
             return scriptapi.identifyscript()..'/Profiles/'
-        elseif string.find('Aurora', scriptapi.grabscripts(scriptapi.scripts)) then
+        elseif string.find('Aurora', scriptapi.identifyscript()) then
             return scriptapi.identifyscript()
         end
     end
