@@ -9,7 +9,7 @@
 2. [Night](https://discord.gg/Nt4BnPnYPB)
 3. [AlSploit](https://discord.gg/BgaPWbrjyJ)
 4. [Moon](https://discord.gg/GyKEDmVkPQ)
-5. [Aurora](https://github.com/cocotv666/Aurora) -- dropped until i can find the path
+5. [Aurora](https://github.com/cocotv666/Aurora)
 6. [Flux](https://discord.gg/X4T9HrK2ge)
 
 ## Supported Vape Customs (beta)
