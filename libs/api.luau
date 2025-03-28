@@ -39,7 +39,7 @@ scriptapi.identifyscript = function()
 end
 
 scriptapi.excludedscripts = function()
-    local excluded = {'newvape', 'Aurora'}
+    local excluded = {'newvape', 'Aurora', 'Night'}
     return table.concat(excluded, ',')..','..table.concat(scriptapi.grabscripts(scriptapi.vapecustoms), ',')
 end
 
@@ -52,6 +52,8 @@ scriptapi.getfolder = function()
             return scriptapi.identifyscript()..'/Profiles/'
         elseif string.find('Aurora', scriptapi.identifyscript()) then
             return scriptapi.identifyscript()
+        elseif string.find('Night', scriptapi.identifyscript()) then
+            return scriptapi.identifyscript()..'/Config/'
         end
     end
     return scriptapi.identifyscript()..'/profiles/'
