@@ -11,6 +11,7 @@
 4. [Moon](https://discord.gg/GyKEDmVkPQ)
 5. [Aurora](https://github.com/cocotv666/Aurora)
 6. [Flux](https://discord.gg/X4T9HrK2ge)
+7. [Modified Flux](https://github.com/sstvskids/Flux) -- has support for solara + installer
 
 ## Supported Vape Customs (beta)
 Vape customs that use different directorys ('newvape' --> 'lunar', 'oldvape', 'skid')

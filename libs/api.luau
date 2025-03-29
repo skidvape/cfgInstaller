@@ -2,6 +2,10 @@ local scriptapi = {}
 local cfg = getgenv().cfg
 local customcfg = getgenv().customvape
 local url = 'https://api.github.com/repos/skidvape/cfgInstaller/contents/cfgs/'..cfg
+if getgenv().customvape ~= nil and string.find(cfg, '-') then
+    getgenv().customvape = nil
+    return nil
+end
 scriptapi.scripts = {
     night = 'Night',
     moon = 'Moon',
