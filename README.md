@@ -1,5 +1,5 @@
 > [!IMPORTANT]
-> cfgInstaller might not have the latest up-to date configs!
+> cfgInstaller will never be paid, and configs WILL most likely be out-of-date.
 
 ## Contacts
 [YouTube](https://youtube.com/@stavexploitz)
