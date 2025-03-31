@@ -22,9 +22,11 @@ scriptapi.vapecustoms = {
 
 scriptapi.grabscripts = function(path: table)
     local val: table = {}
-    for _,v in path do
-        table.insert(val, v)
-    end
+    task.spawn(function()
+        for _,v in path do
+            table.insert(val, v)
+        end
+    end)
     return val
 end
 
@@ -33,12 +35,14 @@ scriptapi.excludedscripts = function()
 end
 
 scriptapi.identifyscript = function()
-    for i,v in pairs(scriptapi.scripts) do
-        if string.find(cfg, tostring(i)) then return v end
-    end
-    for i,v in pairs(scriptapi.vapecustoms) do
-        if customcfg and string.find(customcfg, tostring(i)) then return v end
-    end
+    task.spawn(function()
+        for i,v in pairs(scriptapi.scripts) do
+            if string.find(cfg, tostring(i)) then return v end
+        end
+        for i,v in pairs(scriptapi.vapecustoms) do
+            if customcfg and string.find(customcfg, tostring(i)) then return v end
+        end
+    end)
     return 'newvape'
 end
 

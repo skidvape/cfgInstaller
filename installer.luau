@@ -1,11 +1,10 @@
 if not getgenv().cfg then return nil end
 
-local cfg = getgenv().cfg -- returns the option you picked
-local url = 'https://api.github.com/repos/skidvape/cfgInstaller/contents/cfgs/'..cfg
-local scriptapi = loadstring(game:HttpGet('https://raw.githubusercontent.com/skidvape/cfgInstaller/refs/heads/main/libs/api.luau'))()
-local script = scriptapi.identifyscript()
-local getfolder = scriptapi.getfolder()
-local getscript = scriptapi.getscript()
+local cfg: string = getgenv().cfg
+local scriptapi: string = loadstring(game:HttpGet('https://raw.githubusercontent.com/skidvape/cfgInstaller/refs/heads/main/libs/api.luau'))()
+local script: scriptapi = scriptapi.identifyscript()
+local getfolder: scriptapi = scriptapi.getfolder()
+local getscript: scriptapi = scriptapi.getscript()
 
 if string.find(cfg, 'alsploit') then
     if isfile('AlSploitConfiguration.json') then delfile('AlSploitConfiguration.json') end
