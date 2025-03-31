@@ -21,16 +21,18 @@ else
 end
 
 local suc, res = pcall(function()
-    for _, v in ipairs(getscript) do
-        if not isfile(v.name) then
-            writefile(v.name, game:HttpGet(v.url))
+    task.spawn(function()
+        for _, v in getscript do
+            if not isfile(v.name) then
+                writefile(v.name, game:HttpGet(v.url))
+            end
         end
-    end
+    end)
 end)
    
 if suc then
     getgenv().iconval = 'rbxassetid://10723415903'
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/skidvape/cfgInstaller/refs/heads/main/libs/notif.luau'))()
+    return loadstring(game:HttpGet('https://raw.githubusercontent.com/skidvape/cfgInstaller/refs/heads/main/libs/notif.luau'))()
 elseif res and not suc then
     getgenv().iconval = 'rbxassetid://10734951173'
     getgenv().cfgtext = 'Config: '..cfg..'\nError: '..res
