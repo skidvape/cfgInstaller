@@ -1,6 +1,6 @@
 > [!IMPORTANT]
 > cfgInstaller will never be paid, and configs WILL most likely be out-of-date.
-
+> cfgInstaller will always stay open-source
 ## Contacts
 [YouTube](https://youtube.com/@stavexploitz)
 
@@ -20,7 +20,7 @@ To use this put this above your vape config of choice
 getgenv().customvape = 'lunar' -- oldvape, skid
 ```
 1. [Lunar (beta)](https://discord.gg/4e7CJCxGE6)
-2. [Skid (discontinued)](https://github.com/skidvape/SkidForRoblox)
+2. [Skid (beta + discontinued)](https://github.com/skidvape/SkidForRoblox)
 3. [Old-Skid (discontinued)](https://github.com/sstvskids/SkidVapeForRoblox)
 4. Old-Vape (use old skid for archive)
 

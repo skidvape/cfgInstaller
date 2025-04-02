@@ -1,12 +1,10 @@
 if not getgenv().cfg then return nil end
-
-local cfg: string = getgenv().cfg
 local scriptapi: string = loadstring(game:HttpGet('https://raw.githubusercontent.com/skidvape/cfgInstaller/refs/heads/main/libs/api.luau'))()
 local script: scriptapi = scriptapi.identifyscript()
 local getfolder: scriptapi = scriptapi.getfolder()
 local getscript: scriptapi = scriptapi.getscript()
 
-if string.find(cfg, 'alsploit') then
+if string.find(getgenv().cfg, 'alsploit') then
     if isfile('AlSploitConfiguration.json') then delfile('AlSploitConfiguration.json') end
 else
     for _, v in {script, getfolder} do
@@ -34,6 +32,6 @@ if suc then
     return loadstring(game:HttpGet('https://raw.githubusercontent.com/skidvape/cfgInstaller/refs/heads/main/libs/notif.luau'))()
 elseif res and not suc then
     getgenv().iconval = 'rbxassetid://10734951173'
-    getgenv().cfgtext = 'Config: '..cfg..'\nError: '..res
+    getgenv().cfgtext = 'Config: '..getgenv().cfg..'\nError: '..res
     return loadstring(game:HttpGet('https://raw.githubusercontent.com/skidvape/cfgInstaller/refs/heads/main/libs/notif.luau'))()
 end
