@@ -1,3 +1,8 @@
+--[[
+    cfgInstaller --> @stav
+    API.luau --> @stav
+]]
+
 if getgenv().customvape ~= nil and string.find(getgenv().cfg, '-') then
     getgenv().customvape = nil
     return nil
