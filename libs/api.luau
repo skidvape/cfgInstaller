@@ -22,7 +22,9 @@ scriptapi.scripts = {
 scriptapi.vapecustoms = {
     oldvape = 'vape',
     skid = 'skid',
-    lunar = 'Lunar Vape'
+    lunar = 'Lunar Vape',
+    vpp = 'vwpacket', -- voidpastepacket
+    rise = 'rise'
 }
 
 scriptapi.grabscripts = function(path: table)
