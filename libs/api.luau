@@ -17,7 +17,9 @@ scriptapi.scripts = {
     moon = 'Moon',
     aurora = 'Aurora',
     flux = 'Flux',
-    bruise = 'bruise'
+    bruise = 'bruise',
+    polarisRewrite = 'polaris',
+    polaris = 'Polaris'
 }
 scriptapi.vapecustoms = {
     oldvape = 'vape',
@@ -38,7 +40,7 @@ scriptapi.grabscripts = function(path: table)
 end
 
 scriptapi.excludedscripts = function()
-    return table.concat({'newvape', 'Aurora', 'Night', 'bruise'}, ',')..','..table.concat(scriptapi.grabscripts(scriptapi.vapecustoms), ',')
+    return table.concat({'newvape', 'Aurora', 'Night', 'bruise', 'polaris', 'Polaris'}, ',')..','..table.concat(scriptapi.grabscripts(scriptapi.vapecustoms), ',')
 end
 
 scriptapi.identifyscript = function()
@@ -60,8 +62,10 @@ scriptapi.getfolder = function()
     local paths: table = {
         ['Lunar Vape'] = scriptapi.identifyscript()..'/Profiles/',
         ['Aurora'] = scriptapi.identifyscript(),
+        ['Polaris'] = scriptapi.identifyscript(),
         ['Night'] = scriptapi.identifyscript()..'/Config/',
-        ['bruise'] = scriptapi.identifyscript()..'/core/configs/'
+        ['bruise'] = scriptapi.identifyscript()..'/core/configs/',
+        ['polaris'] = scriptapi.identifyscript()..'/configs/',
     }
     return paths[scriptapi.identifyscript()] or scriptapi.identifyscript()..'/profiles/'
 end
