@@ -16,7 +16,7 @@
 9. [Polaris Rewrite](https://github.com/sstvskids/PolarisRewrite) -- has support for solara and bedwars + installer
 
 ## Supported Vape Customs (beta)
-Vape customs that use different directorys ('newvape' --> 'lunar', 'oldvape', 'skid')
+Vape customs that use different directorys ('newvape' --> 'lunar', 'oldvape', 'skid', 'vpp', 'rise') -- vpp = voidpaste packet
 To use this put this above your vape config of choice
 ```luau
 getgenv().customvape = 'lunar' -- oldvape, skid
