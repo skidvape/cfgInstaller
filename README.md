@@ -12,7 +12,7 @@
 5. [Aurora](https://github.com/cocotv666/Aurora) -- support for solara, pasted
 6. [Flux](https://discord.gg/X4T9HrK2ge)
 7. [Modified Flux](https://github.com/sstvskids/Flux) -- has support for solara + installer
-8. [Voidware Packet](https://github.com/VapeVoidware/VWPacket) -- support for solara, pasted
+8. [Voidware](https://github.com/VapeVoidware/)
 9. [Polaris](https://github.com/sstvskids/Polaris) -- support for installer, lack of mobile support
 10. [Polaris Rewrite](https://github.com/sstvskids/PolarisRewrite) -- has support for solara and bedwars + installer
 
