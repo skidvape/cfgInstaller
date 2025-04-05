@@ -12,9 +12,8 @@
 5. [Aurora](https://github.com/cocotv666/Aurora) -- support for solara, pasted
 6. [Flux](https://discord.gg/X4T9HrK2ge)
 7. [Modified Flux](https://github.com/sstvskids/Flux) -- has support for solara + installer
-8. [Voidware](https://github.com/VapeVoidware/)
-9. [Polaris](https://github.com/sstvskids/Polaris) -- support for installer, lack of mobile support
-10. [Polaris Rewrite](https://github.com/sstvskids/PolarisRewrite) -- has support for solara and bedwars + installer
+8. [Polaris](https://github.com/sstvskids/Polaris) -- support for installer, lack of mobile support
+9. [Polaris Rewrite](https://github.com/sstvskids/PolarisRewrite) -- has support for solara and bedwars + installer
 
 ## Supported Vape Customs (beta)
 Vape customs that use different directorys ('newvape' --> 'lunar', 'oldvape', 'skid')
@@ -26,6 +25,7 @@ getgenv().customvape = 'lunar' -- oldvape, skid
 2. [Skid (beta + discontinued)](https://github.com/skidvape/SkidForRoblox)
 3. [Old-Skid (discontinued)](https://github.com/sstvskids/SkidVapeForRoblox)
 4. Old-Vape (use old skid for archive)
+5. [Voidware](https://github.com/VapeVoidware/)
 
 ## Usage
 1. Download the specific scripting utility of your choice.
