@@ -9,9 +9,12 @@
 2. [Night](https://discord.gg/Nt4BnPnYPB)
 3. [AlSploit](https://discord.gg/BgaPWbrjyJ)
 4. [Moon](https://discord.gg/GyKEDmVkPQ)
-5. [Aurora](https://github.com/cocotv666/Aurora)
+5. [Aurora](https://github.com/cocotv666/Aurora) -- support for solara, pasted
 6. [Flux](https://discord.gg/X4T9HrK2ge)
 7. [Modified Flux](https://github.com/sstvskids/Flux) -- has support for solara + installer
+8. [Voidware Packet](https://github.com/VapeVoidware/VWPacket) -- support for solara, pasted
+9. [Polaris](https://github.com/sstvskids/Polaris) -- support for installer, lack of mobile support
+10. [Polaris Rewrite](https://github.com/sstvskids/PolarisRewrite) -- has support for solara and bedwars + installer
 
 ## Supported Vape Customs (beta)
 Vape customs that use different directorys ('newvape' --> 'lunar', 'oldvape', 'skid')
