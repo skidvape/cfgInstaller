@@ -9,6 +9,9 @@
 ## Contacts
 [YouTube](https://youtube.com/@stavexploitz)
 
+> [!IMPORTANT]
+> CatVape support **might** require 3 arguments to install configs (user, pass, developer)
+
 ## Supported Scripts
 1. [Vape](https://github.com/7GrandDadPGN/VapeV4ForRoblox)
 2. [Night](https://discord.gg/Nt4BnPnYPB)
@@ -32,9 +35,6 @@ getgenv().customvape = 'lunar' -- oldvape, skid
 4. Old-Vape (use old skid for archive)
 5. [Voidware](https://github.com/VapeVoidware/)
 6. [CatVape](https://discord.gg/CUW3TPH8sg)
-
-> [!IMPORTANT]
-> CatVape support will soon require 3 arguments in the future to install configs. (user, pass, dev)
 
 ## Usage
 1. Download the specific scripting utility of your choice.
