@@ -9,6 +9,7 @@
 ## Contacts
 [YouTube](https://youtube.com/@stavexploitz)
 
+
 > [!IMPORTANT]
 > CatVape support **might** require 3 arguments to install configs (user, pass, developer)
 
