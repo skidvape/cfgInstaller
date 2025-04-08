@@ -1,8 +1,5 @@
 > [!IMPORTANT]
-> cfgInstaller will never be paid, and configs WILL most likely be out-of-date.
->
-> cfgInstaller will always stay open-source
->
+> cfgInstaller will always be open-source, never be paid, however configs may still be out of date
 > CatVape support will soon require 3 arguments in the future to run the script. (user, pass, dev)
 
 ## Contacts
