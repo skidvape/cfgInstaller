@@ -1,10 +1,5 @@
---[[
-    cfgInstaller --> @stav
-    api.luau --> @stav
-    installer.luau --> stav
-]]
-
 if not getgenv().cfg then return nil end
+
 local scriptapi: string = loadstring(game:HttpGet('https://raw.githubusercontent.com/skidvape/cfgInstaller/refs/heads/main/libs/api.luau'))()
 local script: scriptapi = scriptapi.identifyscript()
 local getfolder: scriptapi = scriptapi.getfolder()

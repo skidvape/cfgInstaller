@@ -1,12 +1,8 @@
---[[
-    cfgInstaller --> @stav
-    API.luau --> @stav
-]]
-
 if getgenv().customvape ~= nil and string.find(getgenv().cfg, '-') then
     getgenv().customvape = nil
     return nil
 end
+
 local scriptapi: table = {}
 local cfg: string = getgenv().cfg
 local customcfg: string = getgenv().customvape
