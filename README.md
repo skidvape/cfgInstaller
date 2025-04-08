@@ -1,7 +1,5 @@
 > [!IMPORTANT]
 > cfgInstaller will always be open-source, never be paid, however configs may still be out of date
->
-> CatVape support will soon require 3 arguments in the future to run the script. (user, pass, dev)
 
 <div align="center">
   <h1>cfgInstaller</h1>
@@ -34,6 +32,9 @@ getgenv().customvape = 'lunar' -- oldvape, skid
 4. Old-Vape (use old skid for archive)
 5. [Voidware](https://github.com/VapeVoidware/)
 6. [CatVape](https://discord.gg/CUW3TPH8sg)
+
+> [!IMPORTANT]
+> CatVape support will soon require 3 arguments in the future to install configs. (user, pass, dev)
 
 ## Usage
 1. Download the specific scripting utility of your choice.
