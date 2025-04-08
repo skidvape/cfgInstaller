@@ -26,7 +26,8 @@ scriptapi.vapecustoms = {
     skid = 'skid',
     lunar = 'Lunar Vape',
     vpp = 'vwpacket', -- voidpastepacket
-    rise = 'rise'
+    rise = 'rise',
+    cat = 'newcatvape'
 }
 
 scriptapi.grabscripts = function(path: table)

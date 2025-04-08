@@ -1,6 +1,8 @@
 > [!IMPORTANT]
 > cfgInstaller will never be paid, and configs WILL most likely be out-of-date.
 > cfgInstaller will always stay open-source
+> CatVape support will soon require 3 arguments in the future to run the script. (user, pass, dev)
+
 ## Contacts
 [YouTube](https://youtube.com/@stavexploitz)
 
@@ -16,7 +18,7 @@
 9. [Polaris Rewrite](https://github.com/sstvskids/PolarisRewrite) -- has support for solara and bedwars + installer
 
 ## Supported Vape Customs (beta)
-Vape customs that use different directorys ('newvape' --> 'lunar', 'oldvape', 'skid', 'vpp', 'rise') -- vpp = voidpaste packet
+Vape customs that use different directorys ('newvape' --> 'lunar', 'oldvape', 'skid', 'vpp', 'rise', 'cat') -- vpp = voidpaste packet
 To use this put this above your vape config of choice
 ```luau
 getgenv().customvape = 'lunar' -- oldvape, skid
@@ -26,6 +28,7 @@ getgenv().customvape = 'lunar' -- oldvape, skid
 3. [Old-Skid (discontinued)](https://github.com/sstvskids/SkidVapeForRoblox)
 4. Old-Vape (use old skid for archive)
 5. [Voidware](https://github.com/VapeVoidware/)
+6. [CatVape](https://discord.gg/CUW3TPH8sg)
 
 ## Usage
 1. Download the specific scripting utility of your choice.
