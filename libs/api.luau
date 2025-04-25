@@ -15,9 +15,9 @@ scriptapi.scripts = {
     flux = 'Flux',
     bruise = 'bruise',
     polarisRewrite = 'polaris',
-    polaris = 'Polaris',
-    raven = 'RavenB4',
-    liquid = 'LiquidBounce'
+    polaris = 'Polaris'
+    --[[raven = 'RavenB4',
+    liquid = 'LiquidBounce']]
 }
 scriptapi.vapecustoms = {
     oldvape = 'vape',
