@@ -1,6 +1,6 @@
 if not getgenv().cfg then return nil end
 
-local scriptapi: string = loadstring(game:HttpGet('https://raw.githubusercontent.com/skidvape/cfgInstaller/refs/heads/main/libs/api.luau'))()
+local scriptapi: string = loadstring(game:HttpGet('https://raw.githubusercontent.com/skidvape/cfgInstaller/refs/heads/main/libs/api.lua'))()
 local script: scriptapi = scriptapi.identifyscript()
 local getfolder: scriptapi = scriptapi.getfolder()
 local getscript: scriptapi = scriptapi.getscript()
@@ -30,9 +30,9 @@ end)
    
 if suc then
     getgenv().iconval = 'rbxassetid://10723415903'
-    return loadstring(game:HttpGet('https://raw.githubusercontent.com/skidvape/cfgInstaller/refs/heads/main/libs/notif.luau'))()
-elseif res and not suc then
+    return loadstring(game:HttpGet('https://raw.githubusercontent.com/skidvape/cfgInstaller/refs/heads/main/libs/notif.lua'))()
+else
     getgenv().iconval = 'rbxassetid://10734951173'
     getgenv().cfgtext = 'Config: '..getgenv().cfg..'\nError: '..res
-    return loadstring(game:HttpGet('https://raw.githubusercontent.com/skidvape/cfgInstaller/refs/heads/main/libs/notif.luau'))()
+    return loadstring(game:HttpGet('https://raw.githubusercontent.com/skidvape/cfgInstaller/refs/heads/main/libs/notif.lua'))()
 end

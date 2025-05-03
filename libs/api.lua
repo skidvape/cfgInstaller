@@ -1,7 +1,4 @@
-if getgenv().customvape ~= nil and string.find(getgenv().cfg, '-') then
-    getgenv().customvape = nil
-    return nil
-end
+if getgenv().customvape ~= nil and string.find(getgenv().cfg, '-') then return getgenv().customvape == nil end
 
 local scriptapi: table = {}
 local cfg: string = getgenv().cfg
@@ -16,8 +13,6 @@ scriptapi.scripts = {
     bruise = 'bruise',
     polarisRewrite = 'polaris',
     polaris = 'Polaris'
-    --[[raven = 'RavenB4',
-    liquid = 'LiquidBounce']]
 }
 scriptapi.vapecustoms = {
     oldvape = 'vape',
@@ -70,16 +65,20 @@ scriptapi.getfolder = function()
 end
 
 scriptapi.getscript = function()
-    local cfgurl: string = game:HttpGet(url)
-    local cfgfiles: table = game:GetService('HttpService'):JSONDecode(cfgurl)
     local script: table = {}
-    task.spawn(function()
-        for _, v in cfgfiles do
-            local scriptpath: string = scriptapi.getfolder()..v.name
-            if string.find(cfg, 'alsploit') then scriptpath = v.name end
-            table.insert(script, {name = scriptpath, url = v.download_url})
-        end
+    local suc, res = pcall(function()
+        cloneref(game:GetService('HttpService')):JSONDecode(game:HttpGet(url))
     end)
+    if suc then
+        task.spawn(function()
+            for _, v in pairs(res) do
+                local scriptpath: string = (string.find(cfg, 'alsploit') and v.name) or scriptapi.getfolder()..v.name
+                table.insert(script, {name = scriptpath, url = v.download_url})
+            end
+        end)
+    else
+        return warn('failed to get url!')
+    end
     return script
 end
 
