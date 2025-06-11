@@ -67,7 +67,7 @@ end
 scriptapi.getscript = function()
     local script: table = {}
     local suc, res = pcall(function()
-        cloneref(game:GetService('HttpService')):JSONDecode(game:HttpGet(url))
+        return cloneref(game:GetService('HttpService')):JSONDecode(game:HttpGet(url))
     end)
     if suc then
         for _, v in pairs(res) do
