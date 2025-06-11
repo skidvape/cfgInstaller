@@ -70,12 +70,10 @@ scriptapi.getscript = function()
         cloneref(game:GetService('HttpService')):JSONDecode(game:HttpGet(url))
     end)
     if suc then
-        task.spawn(function()
-            for _, v in pairs(res) do
-                local scriptpath: string = (string.find(cfg, 'alsploit') and v.name) or scriptapi.getfolder()..v.name
-                table.insert(script, {name = scriptpath, url = v.download_url})
-            end
-        end)
+        for _, v in pairs(res) do
+            local scriptpath: string = (string.find(cfg, 'alsploit') and v.name) or scriptapi.getfolder()..v.name
+            table.insert(script, {name = scriptpath, url = v.download_url})
+        end
     else
         return warn('failed to get url!')
     end
